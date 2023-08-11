@@ -1,0 +1,1041 @@
+/* Base CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2F2F2;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a:focus {
+    outline: 0 solid
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    color: #000000;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 1200px;
+}
+
+
+/*-------------------- Offcanvas area css start --------------------*/
+
+.menu-close {
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    cursor: pointer;
+    transition: .4s;
+    border: 1px solid #fff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-close:hover {
+    color: #000;
+    background: #fff;
+}
+
+.offcanvas-area {
+    position: fixed;
+    left: -100%;
+    height: 100%;
+    width: 318px;
+    background: #183C4B;
+    z-index: 6;
+    padding-top: 35px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    visibility: hidden;
+    top: 0;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.offcanvas-area.active {
+    left: 0;
+    visibility: visible;
+}
+
+.offcanvas-area .main-menu ul li a {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    transition: .3s;
+    padding: 16px 22px;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.offcanvas-area .main-menu ul li:first-child a {
+    border-top: 1px solid #fff;
+}
+
+.offcanvas-area .main-menu ul li a:hover,
+.offcanvas-area .main-menu ul li a[aria-expanded="true"] {
+    color: #63ffd8;
+    padding: 16px 28px;
+}
+
+.offcanvas-menu .main-menu ul {
+    display: block;
+    padding-top: 94px;
+    padding-left: 0;
+    margin-bottom: 65px;
+    list-style: none;
+}
+
+.offcanvas-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .4s;
+    transition: .4s;
+    z-index: 5;
+}
+
+.offcanvas-overlay.active {
+    opacity: .4;
+    visibility: visible;
+}
+
+.menu-open {
+    font-size: 27px;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    display: none;
+}
+
+/*-------------------- Offcanvas area css end --------------------*/
+
+
+/*-------------------- Header area css start --------------------*/
+
+.hero__gradient {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to top, rgb(8 23 31), transparent);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -2;
+}
+
+.live__chat {
+    position: fixed;
+    right: 30px;
+    bottom: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    gap: 16px;
+    padding: 2px 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.live__chat a {
+    color: #183C4B;
+    font-size: 22px;
+    transition: .3s;
+}
+
+.live__chat a:first-child {
+    font-size: 24px;
+}
+
+.live__chat a:hover {
+    color: #2da895;
+}
+
+.header__main__blk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo a {
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.header__logo a:hover {
+    color: #183C4B;
+}
+
+.header__menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu ul li a {
+    display: block;
+    background-color: #183C4B;
+    padding: 14px 36px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-right: 1px solid #5a7b8c;
+    transition: .3s;
+}
+
+.header__menu ul li:last-child a {
+    border-right: none !important;
+    border-bottom-right-radius: 6px;
+}
+
+.header__menu ul li:first-child a {
+    border-bottom-left-radius: 6px;
+}
+
+.header__menu ul li a:hover {
+    background-color: #102934;
+    color: #fff;
+}
+
+.header__menu ul li a.active {
+    background-color: #102934;
+    color: #fff;
+}
+
+/*-------------------- Header area css end --------------------*/
+
+
+/*-------------------- Hero area css start --------------------*/
+
+.hero__area {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.hero__single__slide {
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__slide__title {
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 24px 50px;
+}
+
+.hero__slide__title h4 {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.hero__slide__title h4 span {
+    color: #63ffd8;
+}
+
+.hero__main__slider.owl-carousel .owl-nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 30px;
+}
+
+.hero__main__slider.owl-carousel .owl-nav button {
+    color: #fff !important;
+    font-size: 34px !important;
+    transition: .3s;
+    opacity: 0.4;
+}
+
+.hero__main__slider.owl-carousel .owl-nav button:hover {
+    opacity: 1;
+}
+
+.hero__main__slider.owl-carousel .owl-dots {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.hero__main__slider.owl-carousel .owl-dots button {
+    width: 15px;
+    height: 5px;
+    background-color: #fff !important;
+    transition: .3s;
+    opacity: .6;
+    border-radius: 10px;
+}
+
+.hero__main__slider.owl-carousel .owl-dots button.active {
+    width: 30px;
+    opacity: 1;
+}
+
+/*-------------------- Hero area css end --------------------*/
+
+
+/*-------------------- Feature area css start --------------------*/
+
+.feature__wrap {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 24px;
+}
+
+.feature__main__blk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature__single__blk {
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: .3s;
+    position: relative;
+}
+
+.feature__img__blk {
+    height: 170px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.feature__img__blk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.feature__single__info {
+    padding: 24px 15px;
+}
+
+.feature__single__info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.feature__single__info h5 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2da895;
+}
+
+.feature__single__info h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.feature__btn a {
+    width: 100%;
+    height: 50px;
+    background-color: #183C4B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.feature__btn a:hover {
+    background-color: #2da895;
+    color: #fff;
+}
+
+.feature__single__blk:hover .feature__img__blk img {
+    transform: scale(1.1);
+}
+
+.feature__sidebar__main {
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+}
+
+.feature__sidebar__title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.feature__sidebar__title h4 {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+
+.feature__sidebar__single {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+}
+
+.feature__sidebar__single__title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 44px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.feature__sidebar__single__title h5 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.feature__sidebar__single__title h5 span {
+    color: #63ffd8;
+}
+
+.feature__sidebar__single:last-child {
+    margin-bottom: 0;
+}
+
+.feature__area {
+    padding-bottom: 30px;
+}
+
+.feature__sidebar__single:hover {
+    opacity: .8;
+}
+
+/*-------------------- Feature area css end --------------------*/
+
+
+/*-------------------- Type area css start --------------------*/
+
+.type__area {
+    padding-bottom: 40px;
+}
+
+.type__title {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 15px;
+}
+
+.type__title h2 {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.type__main__blk {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.type__single__blk a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.type__single__blk a img {
+    flex: 0 0 auto;
+    width: 120px;
+}
+
+.type__single__blk a:hover {
+    opacity: .8;
+}
+
+/*-------------------- Type area css end --------------------*/
+
+
+/*-------------------- Footer area css start --------------------*/
+
+.footer__area {
+    background-color: #173B4C;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.footer__main__blk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.footer__single__blk h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+}
+
+.footer__single__blk p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.footer__social a {
+    color: #fff;
+    font-size: 22px;
+    transition: .3s;
+}
+
+.footer__social a:hover {
+    color: #2da895;
+}
+
+.footer__single__blk ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__single__blk ul li {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer__single__blk ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer__single__blk iframe {
+    width: 100%;
+    height: 180px;
+}
+
+.footer__copy {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer__copy span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: .5;
+}
+
+/*-------------------- Footer area css end --------------------*/
+
+
+/*-------------------- Inventory area css start --------------------*/
+
+.inventory__area {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.inventory__main__blk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.inventory__single__blk {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.inventory__img__blk {
+    width: 250px;
+    height: 210px;
+    overflow: hidden;
+    border-radius: 6px;
+    flex: 0 0 auto;
+}
+
+.inventory__img__blk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inventory__single__content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.inventory__single__content span {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2da895;
+}
+
+.inventory__single__content h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.inventory__single__content h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.inventory__single__content p {
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.inventory__single__content a {
+    width: 100%;
+    height: 36px;
+    background-color: #e9f0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #183C4B;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+.inventory__single__content a:hover {
+    background-color: #2da895;
+    color: #fff;
+}
+
+/*-------------------- Inventory area css end --------------------*/
+
+
+/*-------------------- Contact area css start --------------------*/
+
+.contact__area {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.contact__title {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 15px;
+}
+
+.contact__title h2 {
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.contact__main__blk {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 45px 30px;
+}
+
+.contact__form {
+    position: relative;
+    margin-bottom: 30px;
+    height: 64px;
+}
+
+.contact__form input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    font-size: 16px;
+}
+
+.contact__form label {
+    position: absolute;
+    left: 30px;
+    top: -12px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    z-index: 5;
+    padding: 0px 6px;
+}
+
+.contact__textarea {
+    height: 200px;
+}
+
+.contact__textarea textarea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact__btn {
+    width: 230px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    color: #000;
+    transition: .3s;
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact__btn::before {
+    background-color: #000;
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 0px;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.contact__btn:hover::before {
+    left: 0px;
+    right: auto;
+    width: 100%;
+}
+
+.contact__btn:hover {
+    color: #fff;
+}
+
+.contact--message {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.color-green {
+    color: #1bfa4e;
+}
+
+.color-red {
+    color: var(--red);
+}
+
+/*-------------------- Contact area css end --------------------*/
+
+
+/*-------------------- Details area css start --------------------*/
+
+.details__area {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.details__title h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #000;
+}
+
+.details__title {
+    margin-bottom: 20px;
+}
+
+.details__feature {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.details__feature__single {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.details__feature__single h4 {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.details__feature__single h4 span {
+    font-weight: 500;
+    color: #000;
+    margin-right: 10px;
+}
+
+.details__wrap {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details__preview__single {
+    height: 520px;
+    overflow: hidden;
+}
+
+.details__preview__single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details__thumb__single {
+    height: 190px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.details__thumb__single:hover {
+    opacity: .6;
+}
+
+.details__thumb__single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.details__thumb button {
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 32px;
+    transition: .3s;
+    opacity: .5;
+}
+
+.details__thumb button:hover {
+    opacity: 1;
+}
+
+.details__main__slider .slick-prev {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.details__main__slider .slick-next {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.details__main__slider {
+    margin-bottom: 20px;
+}
+
+.details__info p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/*-------------------- Details area css end --------------------*/
+
+
+/*-------------------- Video area css start --------------------*/
+
+.video__area {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.video__main__blk {
+    text-align: center;
+}
+
+.video__main__blk h2 {
+    margin: 0;
+    font-size: 60px;
+    text-transform: capitalize;
+    opacity: .2;
+}
+
+/*-------------------- Video area css end --------------------*/
+
+
+/*-------------------- Default area css start --------------------*/
+/*-------------------- Default area css end --------------------*/
