@@ -161,7 +161,7 @@ a {
 
 .hero__gradient {
     width: 100%;
-    height: 600px;
+    height: 610px;
     background: linear-gradient(to top, rgb(8 23 31), transparent);
     position: absolute;
     left: 0;
@@ -205,17 +205,12 @@ a {
     justify-content: space-between;
 }
 
-.header__logo a {
-    color: #000;
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: .3s;
+.header__logo a svg {
+    width: 130px;
 }
 
-.header__logo a:hover {
-    color: #183C4B;
+.header__area {
+    padding-top: 10px;
 }
 
 .header__menu ul {
@@ -242,10 +237,12 @@ a {
 .header__menu ul li:last-child a {
     border-right: none !important;
     border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .header__menu ul li:first-child a {
     border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
 }
 
 .header__menu ul li a:hover {
